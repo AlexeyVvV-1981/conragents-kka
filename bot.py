@@ -22,8 +22,8 @@ from google.oauth2.service_account import Credentials
 # ─────────────────────────────────────────────
 # Конфигурация
 # ─────────────────────────────────────────────
-TELEGRAM_TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"
-SPREADSHEET_ID = "YOUR_GOOGLE_SPREADSHEET_ID"
+TELEGRAM_TOKEN = "8570877997:AAFz7nNS8pVy3a_vdX6ucoazeFRmxxW15ak"
+SPREADSHEET_ID = "1EhHOJH0bVcQkJxMcMLCGGvCfcV1jOvaHnwvq7ypIXK8"
 SHEET_NAME = "Контрагенты"           # название листа в таблице
 SERVICE_ACCOUNT_FILE = "service_account.json"  # путь к JSON-ключу сервисного аккаунта
 
