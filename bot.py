@@ -61,9 +61,15 @@ def get_sheet():
         "https://www.googleapis.com/auth/spreadsheets",
         "https://www.googleapis.com/auth/drive",
     ]
-    creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=scopes)
+    def get_sheet():
+    import json
+    import os
+    creds_json = os.environ.get("GOOGLE_CREDENTIALS")
+    creds_info = json.loads(creds_json)
+    creds = Credentials.from_service_account_info(creds_info, scopes=scopes)
     client = gspread.authorize(creds)
-    return client.open_by_key(SPREADSHEET_ID).worksheet(SHEET_NAME)
+    spreadsheet = client.open_by_key(SPREADSHEET_ID)
+    return spreadsheet.sheet1
 
 
 def search_contractor(name: str):
